@@ -1,7 +1,8 @@
 .gallery {
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 .gallery__item {
@@ -12,6 +13,24 @@
     cursor: pointer;
 }
 
+body {
+    background-color: #444444;
+}
+
 .red {
     background: red;
+}
+
+.hijo {
+    width: 100px;
+    height: 100px;
+    background-color: #444444;
+    margin-top: 2px;
+    color: #fff;
+}
+
+.padre {
+    width: 200px;
+    height: 202px;
+    background-color: red;
 }

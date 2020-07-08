@@ -1,0 +1,328 @@
+        ..-¨Çllpruebas            
+gb: selecciona una palabra y busca la siguiente coincidencia
+gm: te lleva a la mitad de la linea
+gj: bajar una línea visible, comportamiento habitual de los editores normalges.
+gk: sube una línea como lo haría un editor corriente.
+g0: al principio de la linea ideal si una linea ocuapa 2
+g$: al
+
+
+-- entrando al Modo Insertar
+
+num + (i, a, o, O, cc, S, s, cc, C)
+i: inserta antes del cursor
+I: inserta texto en el primer caracter no espacio
+gI: inserta texto en el primer de la linea
+a: inserta (append) despues del cursor
+A: inserta texto al FINAL de la linea
+O: insertar una linea arriba de donde estaba
+o: de linea actual crea un salto de linea y en modo insert
+s: corta el Caracter del cursor y va a modo insertar
+cc: elimina toda la linea del cursor y va sobre la misma a modo insertar
+c: elimina el texto selecionado y entra en modo Insertar
+S: mismo funcionamiento que cc
+C: Del cursor hasta el final corta y va a modo insertar
+c$: Del cursor hasta el final corta y va a modo insertar
+ea: inserta al final de la palabra
+ciw: corta la palabra entera (no importa donde este) e inserta
+cw: corta la palabra entera (a partir de donde este el cursor)
+num + o: repetir palabras
+num + i: repetir palabras
+cfx: borra el texto hasta x incluido
+ct.: borra el texto hasta el punto sin incluirlo
+cip: borra el parrafo completo donde estes
+ci": borra los que esta dentro de las comillas
+ca": borra todo lo que esta adentra incluso las comillas
+ci(: borra lo que este dentro de los parentesis
+ca(: borra lo que este dentro de los parentesis incluido
+
+    ("buenas hlllhh'dfs'tardes a todo")
+
+-- Atajos del modo Insertar 
+
+ctrl+w: borra la palabra que precede al cursor
+ctrl+u: borra desde donde esta hasta el inici de la linea
+ctrl+h: borra el carácter que precede al cursor
+
+Ctrl + t - indent (move right) line one shiftwidth during insert mode
+Ctrl + d - de-indent (move left) line one shiftwidth during insert mode
+Ctrl + n : insert (auto-complete) next match before the cursor during insert mode
+Ctrl + p : insert (auto-complete) match before the cursor during insert mode
+Ctrl + e: inserta el caracter que esta debajo del cursor
+Ctrl + y: inserta el caracter que esta  encima del cursor
+Ctrl + m: del cursor hace un salto de linea
+
+-- Modos de Vim
+
+num + i: escribiras n veces despues de volver al normal mode
+ctrl + v: estando en el modo normal pasamos al modo blocke visual
+shift + v: estando en el modo normal pasamos al modo visual linea
+
+-- moverser el cursor por el fichero
+
+num + (gg, G, j, k)
+H: te lleva ala parte superior de la pantalla (high)
+M: te llevara a la zona media de la pantalla (low)
+L: te lleva ala parte inferior de la pantalla (medium)
+G: te lleva al final
+gg: te lleva al principio del archivo
+ctrl + b: es como repag o (backward)
+ctrl + f: es como avpag o (fordward)
+ctrl + u: es como repag o (backward) 1/2
+ctrl + d: es como avpag o (fordward) 1/2
+Ctrl + e - move screen down one line (without moving cursor)
+Ctrl + y - move screen up one line (without moving cursor)
+zt z+CR: pone la linea del cursor en la parte superior de la ventana
+zz z.: centra el cursor al medio de la pantalla
+zb z-: pone la linea del cursor en la parte inferios de la ventana
+ctrl + o: te mueve a tu antigua posicion
+ctrl + i: te mueve a tu newer posicion
+
+) te lleva a la siguiente frase.
+( para ir a la frase anterior.
+} te lleva al párrafo siguiente.
+{ para ir al párrafo anterior.
+
+-- mover por la linea del cursor
+
+numero + (w, e, h, l, b, ge, gE, (, ,) ,{ ,} n, N)
+0: saltar al principio de la linea
+$: saltar al final de la linea
+^: Ir al primer caracter no espacio de la linea del cursor
+^: Ir al primer caracter no espacio de la linea del cursor
+g_: saltar al último caracter no espacio de la linea
+w: salta al comienzo de cada palabra
+e: salta al final de cada palabra
+b: va al principio de la palabra anterior
+ge: va al final de la palabra anterior
+f: salta a la siguiente ocurrencia del caracter
+F: salta a la anterior ocurrencia del caracter
+*: cuando este en una palabra te llevara a la siguiente misma palabra
+#: cuando este en una palabra te llevara a la anterior misma
+%: ir al caracter asociado de un (),{}
+; - repeat previous f, t, F or T movement adelante
+, - repeat previous f, t, F or T movement, atras
+
+los delimitadores son espacios en blanco, tabuladores y saltos de línea.
+W,E,B,gE
+
+-- copiar, cortar elementos (put, yeak)
+
+numero + (y, yy, dd, y$, D, x, u, ctrl+r, .,)
+gp:
+gP:
+p: para pegar en la linea siguiente de donde esta el cursor
+P: en la linea actual del cursor o lado izquierdo
+(numero) + yy: de la linea actual hacia abajo copiara todo
+yy: copiar al completo la linea donde esta el cursor
+Y: copiar al completo la linea donde esta el cursor
+y$: copiara del cursor hasta el final
+num+y+w: copiara las siguiente n palabras
+yw - copiar el resto de los carácteres de la palabra desde la posición del cursor hasta el principio de la siguiente palabra
+*ye: copiara del cursor hasta el final de la palabra
+yip: copiara el parrafo completo donde se encuentre
+yi": borra los que esta dentro de las comillas
+ya": borra todo lo que esta adentra incluso las comillas
+yi(: borra lo que este dentro de los parentesis
+ya(: borra lo que este dentro de los parentesis incluido
+dd - cortar una línea
+num+d+w: cortara las giguientes n palabras
+*dw: cortara del cursor hasta la siguiente palabra (ideal para borrara una palabra)
+*db: borrara las predecesoras
+de: corta una palabra hasta el final (lo dudo)
+d0: borrara del cursor hasta el inicio
+D: Cortara del cursor hasta el final de la linea
+d$: Cortara del cursor hasta el final de la linea
+dgg: borra del cursor hasta el principio del archivo
+dG: borra del cursor hasta el final del archivo
+x: cortar carácter
+dip: cortara todo el parrafo
+di": cortara los que esta dentro de las comillas
+da": cortara todo lo que esta adentra incluso las comillas
+di(: cortara lo que este dentro de los parentesis
+da(: cortara lo que este dentro de los parentesis incluido
+da[: cortara lo que este dentro de los corchetes incluido
+      ("buenas tarde '  sfs ' sdfsf")
+
+"podemos usar verbo + ambito"
+      
+u: deshace la última acción realizada (num)
+Ctrl + r: vuelve a realizar la ultima accion que hayas deshecho
+.: va a permitir repetir una determianada acción
+
+-- Atajos del VSCode
+
+mayusculas+ctrl+e para acceder al explorador de archivos, 
+mayusculas+ctrl+f, para acceder a la herramienta de b�squeda y reemplazo, 
+mayusculas+ctrl+g, para el control de versiones, 
+mayusculas+ctrl+d, para la herramienta de depuraci�n 
+mayusculas+ctrl+x para las extensiones.
+
+
+d+i+w
+d+a+w
+
+"d es para borrar"
+d + (w o e): corta una palabra con p lo pegamos
+y: es lo mismo pero copiamos
+u : deshace el comando anterior
+. : repite el comando anterior , (ideal tras borrar una palabra d + w)
+
+/ : nos permite buscar una palabra , tambien palabras regulares
+n : del resultado alternamos entre las coincidencias (hacias delante)
+N : del resultado alternamos entre las coincidencias (hacias atras)
+
+-- Marking text (visual mode)
+
+v: inicia el modo visual
+o: mueve al final de las areas de marcado
+ab - selecciona un bloque entero mas ()
+aB - selecciona un bloque entero mas {}
+at - selecciona un bloque entero mas <> tags
+ib - un bloque interno sin ()
+iB - un bloque interno sin {}
+it - un bloque interno sin <> tags
+ap: selecciona un parrafo completo
+ip
+a]: selecciona lo que este en []
+i]: selecciona lo que este dentro de []
+a'
+a"
+a`
+
+-- Modo Linea Visual
+
+V: entramos en el modo linea visual
+o: intercambiamos entre los extremos
+<,>: podemos aplicar sangria a lo selecionado
+J: unira todas las lineas
+gJ: unira las las lineas sin espacios
+
+-- Modo bloque visual
+
+ctrl + v: entramos en modo bloque
+o: intercambiamos entre los extremos del bloque
+0: vamos al principio de las lineas
+$: vamos al final de las lineas
+A: vamos a editar al final del area seleccionada
+I: vamos al principio del area seleccionada a editar
+s: eliminamos el area seleccionada y escribimos
+S: del cursor inicial en adelante eliminara todo
+C: del cursor inicial en adelante eliminara todo
+U: Convierte a mayúsculas toda la selección.
+u: Convierte a minúsculas toda la selección.
+r: Rellena toda la selección con el carácter que se pulse inmediatamente después.
+J: Sustituye todos los saltos de línea de la selección por un espacio en blanco. Si se trataba de líneas sangradas elimina además los espacios en blanco extras.
+gJ: Igual que el anterior, pero sin reajustar los espacios en blanco.
+
+
+Tip Instead of b or B one can also use ( or { respectively.
+
+-- Editar
+
+num + (r, J, gJ): une la n lineas
+x: corta el caracter de la actual posicion del cursor
+X: corta el caracter antes del cursor
+r: me permite sustituir un caracter estando en el mode normal
+R: entra en modo reemplazar
+J: une la linea de abajo con la actual linea con un espacio
+gJ: une la linea de abajo con la actual sin espacio
+g~ - Intercambia las mayusculas por minusculas
+gu - change to lowercase up to MOTION
+gU - change to UPPERCASE up to motion
+xp - transpose two letters (delete and paste)
+u - undo
+U - restore (undo) last changed line
+Ctrl + r - redo
+. - repeat last command
+> - mover texto hacia la derecha
+< - mover texto hacia la izquierda
+~ - pasar de minúscula a mayúscula y VICEVERSa un carac o resaltado
+u - cambia el texto marcado a minusculas
+U - cambia el texto marcada. a mayusculas
+ctrl + a: incrementara sobre el numero en el que este   226.120
+ctrl + x: decrementara sobre el numero en el que este  234.64
+
+:%s/old/new/g - reemplazar en todo el archivo
+:%s/old/new/gc - reemplazar en todo el archivo pidiendo una confirmación
+
+-- Trabajar con las pestañas
+
+gt: irra a la proxima pestaña
+gT: irra a la pestaña anterio
+
+-- Trabajar con varios Archivos en ventanas
+
+Ctrl + ws: dividir ventana Horizontalmente
+Ctrl + wv: dividir ventana verticalmente
+Ctrl + ww: alterna entre las ventanas de texto
+Ctrl + wq: cerrar ventana
+Ctrl + wx: exchange current window with next one
+Ctrl + w=: Pone todas las ventanas del mismo tamaño
+Ctrl + wh: mover el cursor a la ventana izquierda (división vertical)
+Ctrl + wl: mover el cursor a la ventana derecha (división vertical)
+Ctrl + wj: mover el cursor a la ventana de abajo (división horizontal)
+Ctrl + wk: mover el cursor a la ventana de arriba (división horizontal)
+
+gwip - reflow paragraph
+
+Aprende algunos objetos: 
+
+w: Para palabras, es decir: letras delimitadas por “no letras” (w = words).
+s: Para frases, es decir: palabras delimitadas por puntos (s = sentences).
+p: Para párrafos: líneas con texto delimitadas por líneas totalmente en blanco (p = paragraph).
+b: Para paréntesis: texto encerrado entre paréntesis (b = blocks).
+B: Para llaves: Texto encerrado entre llaves
+
+Aprende algunos verbos: 
+
+v (visual), c (change/cambiar), d (delete/borrar), y (yank/copiar).
+d: para borrar. Indicarte que además de borrar, lo copia. De esta forma, te ahorras un paso.
+c: te permite cambiar. Realmente el efecto es el de borrar, y volver al modo insertar. De esta te ahorras pulsar una tecla.
+y: es el verbo que utilizarás para copiar.
+>: introduce una sangría
+Así, básicamente la diferencia entre r y s, es que mientras que el primero cambia el carácter y se mantienen en el modo normal, en el segundo, al realizar el cambio pasas al modo insertar.
+
+-- Aprende algunos modificadores o delimitadores
+
+i (inside/dentro de), inner
+a (around/alrededor), append
+t (till../hasta que encuentra el carácter), 
+f (find../hasta que encuentra el carácter incluyéndolo), / (buscar).
+
+verbo + num + delimitador + ambito
+
+
+%: (tanto por ciento) Representa todas las líneas del documento.
+$: (dólar) Representa la última línea del documento.
+.: (punto) Representa la línea en la que actualmente está el cursor
+
+EXPRESIONES REGULARES
+
+/{string}/m:multilinea
+^: es negativo que no este (tambien /^(com) el principio de la linea )
+,  .h : que puede ser cualquier caracter  --> ih , " h" , "ph"
+
+/expresi[o�]n  ==> encontrar� "expresion" o "expresi�n"
+/\d  --> encontrara todo los digitos
+/\D --> encontrara todo lo que no sea digito
+/\w --> solo buscara letras del alfabeto, digitos: letras simples [W]
+/\babc --> este string tiene que empezar al inicio de cada palabras tambien : "/abc\b
+/abc+ --> dara "abc"hooh , hoho"abccccc"  + : al menos una vez tiene que estar c
+/0*55 -- dara 55 , 055 00000055   *: es lo mismo que + solo que puede no estar
+/abc? -- dara  "ab"sdf"abc"cwf   ?: puede estar o no pero solo una vez
+/(lol){2} busca lollol == /lollol 
+/(com)$  busca al final de la linea que coincida con "com": para que sea todas las lineas /(com)$/m
+
+https://www.blai.blog/2019/05/habilitar-ejecucion-de-archivos-ps1-en.html
+Vim reconoce ciertos objetos de texto
+estándar: palabras, frases, párrafos y bloques. Para ello lo que hace es usar
+delimitadores, es decir: de todos los caracteres posibles en un texto, Vim
+sabe que, por ejemplo, una palabra es una porción de texto compuesta por
+letras encerrada entre caracteres que no son letras; las “no-letras” actúan
+como delimitadores de las palabras. Un párrafo se considera que está
+delimitado por una línea en blanco, un bloque es el texto encerrado entre
+llaves o paréntesis, etc.
+https://www.blai.blog/204.23/05/habilitar-ejecucion-de-archivos-ps1-en.html
+Vim reconoce ciertos objetos de texto
+estándar: palabras, frases, párrafos y bloques.

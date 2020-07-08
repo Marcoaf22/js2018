@@ -1,0 +1,15 @@
+.contenedor{
+	background: #07686c;
+	margin: auto 300px;
+	padding: 30px;
+}
+
+.caja{
+	background: #7982cb;
+	padding: 10px;
+	margin: 20px auto;
+}
+
+p{
+	color: red;
+}
